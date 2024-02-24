@@ -1,0 +1,82 @@
+<html>  
+<head>  
+    <title>Registration Form</title>  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
+</head>
+<style>
+ .box
+ {
+  width:100%;
+  max-width:600px;
+  background-color:#f9f9f9;
+  border:1px solid #ccc;
+  border-radius:5px;
+  padding:16px;
+  margin:0 auto;
+ }
+ .error
+{
+  color: red;
+  font-weight: 700;
+} 
+</style>
+<body>  
+    <div class="container">  
+    <div class="table-responsive">  
+    <h3 align="center">Registration Form</h3><br/>
+     <div class="box">
+     <form id="validate_form" method="post" >
+     <div class="form-group">
+       <label for="fname">First Name</label>
+       <input type="text" name="fname" placeholder="Enter First Name" class="form-control" value=""/>
+       <!-- <?php if(isset($fname)){ echo $fname; }?> -->
+       <!-- <span class="text-danger"><?php if(!empty($fname_error)){ echo $fname_error; } ?></span> -->
+      </div> 
+      <div class="form-group">
+        <label for="lname">Last Name</label>
+        <input type="text" name="lname" placeholder="Enter Last Name" class="form-control" value=""/>
+        <!-- <?php if(isset($lname)){ echo $lname; }?> -->
+        <!-- <span class="text-danger"><?php if(!empty($lname_error)){ echo $lname_error; } ?></span> -->
+       </div> 
+       <div class="form-group">
+        <label for="foneno">Phone No.</label>
+        <input type="text" name="foneno" id="fn" placeholder="Enter Fone No" class="form-control" value=""/> 
+       
+       </div>
+       <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" name="email" placeholder="Enter Email" class="form-control" value=""/>
+        <!-- <?php if(isset($email)){ echo $email; }?> -->
+        <!-- <span class="text-danger"><?php if(!empty($email_error)){ echo $email_error; } ?></span> -->
+       </div>
+       <form class="form-group">
+        <label for="gender">Gender:</label>
+        <input type="text" name="gender" id="gender" placeholder="Enter your gender">
+        <!-- <span class="error"><?php if (isset($_POST['gender_error'])) { echo $_POST['gender_error']; } ?></span> -->
+
+        <div class="form-group">
+            <label for="marital status">Marital Status:</label>
+        <input type="radio" name="maritalstatus" id="maritalstatus" value="single"/>
+        single
+        <!-- <span class="error"><?php if (isset($_POST['married_error'])) { echo $_POST['married_error']; } ?></span> -->
+       <input type="radio" name="maritalstatus" id="maritalstatus" value="married" />
+        Married
+        <!-- <span class="error"><?php if (isset($_POST['gender_error'])) { echo $_POST['gender_error']; } ?></span> -->
+        </div>
+       <div class="form-group">
+       <label for="dob">Date of Birth</label>
+       <input type="date" name="dob" class="form-control" value="<?php if(isset($dob)){ echo $dob; }?>"/>
+       <span class="text-danger"><?php if(!empty($dob_error)){ echo $dob_error; } ?></span>
+      </div>  -->
+      
+      
+      <div class="form-group">
+       <input type="submit" name="submit" value="Next" class="btn btn-success" />
+       </div>
+       <p class="error"><?php if(!empty($msg)){ echo $msg; } ?></p>
+     </form>
+     </div>
+   </div>  
+  </div>
+ </body>  
+</html>
